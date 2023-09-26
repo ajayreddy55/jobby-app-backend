@@ -1,0 +1,41 @@
+GET http://localhost:3005/auth
+
+###
+POST http://localhost:3005/auth/signup
+Content-Type: application/json
+
+{
+    "name": "ajay",
+    "email": "ajay374@gmail.com",
+    "phoneNumber": "1234334232",
+    "gender": "Male",
+    "password": "ajay374"
+}
+
+###
+POST http://localhost:3005/auth/login
+Content-Type: application/json
+
+{
+    "email":"ajay374@gmail.com",
+    "password": "ajay374"
+}
+
+###
+GET http://localhost:3005/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGFkODAwYjE0ZDZhNTk1M2I4NzhjYSIsImlhdCI6MTY5NTYxNzA0OCwiZXhwIjoxNjk1NzAzNDQ4fQ.HaPD2SAvVQpxOKzZ8yaN0eXPY0To851nrzEJOxcuXTM
+
+###
+GET http://localhost:3005/api/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGFkODAwYjE0ZDZhNTk1M2I4NzhjYSIsImlhdCI6MTY5NTYxNzA0OCwiZXhwIjoxNjk1NzAzNDQ4fQ.HaPD2SAvVQpxOKzZ8yaN0eXPY0To851nrzEJOxcuXTM
+
+###
+GET http://localhost:3005/api/jobs/650d8d1925aa5911bfa3a90b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGFkODAwYjE0ZDZhNTk1M2I4NzhjYSIsImlhdCI6MTY5NTYxNzA0OCwiZXhwIjoxNjk1NzAzNDQ4fQ.HaPD2SAvVQpxOKzZ8yaN0eXPY0To851nrzEJOxcuXTM
+
+
+###
+GET http://localhost:3005/api/filterjobs?employment_type=&minimum_package=&search=
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MGFkODAwYjE0ZDZhNTk1M2I4NzhjYSIsImlhdCI6MTY5NTYxNzA0OCwiZXhwIjoxNjk1NzAzNDQ4fQ.HaPD2SAvVQpxOKzZ8yaN0eXPY0To851nrzEJOxcuXTM
+
+
