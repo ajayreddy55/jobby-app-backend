@@ -76,10 +76,6 @@ router.get("/filterjobs", jwtAuth, async (request, response) => {
 
     const filteredJobs = await Jobs.find(queryObject);
 
-    if (filteredJobs.length === 0) {
-      return response.status(400).json({ message: "No Jobs Found" });
-    }
-
     return response.status(200).json({ filteredJobs: filteredJobs });
   } catch (error) {
     console.log(error.message);
